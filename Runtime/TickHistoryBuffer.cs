@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace com.github.elementbound.NetWind
+namespace FunkySheep.NetWind
 {
     [Serializable]
     public class TickHistoryBuffer<T>

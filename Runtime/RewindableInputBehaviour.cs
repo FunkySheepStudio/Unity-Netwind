@@ -2,7 +2,7 @@
 using Unity.Netcode;
 using System;
 
-namespace com.github.elementbound.NetWind
+namespace FunkySheep.NetWind
 {
     public abstract class RewindableInputBehaviour<T> : NetworkBehaviour, IRewindableInput
     {

@@ -2,7 +2,7 @@
 using Unity.Netcode;
 using UnityEngine;
 
-namespace com.github.elementbound.NetWind
+namespace FunkySheep.NetWind
 {
     public abstract class RewindableStateBehaviour<T> : NetworkBehaviour, IRewindableState
     {

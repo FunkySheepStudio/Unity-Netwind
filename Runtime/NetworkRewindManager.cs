@@ -3,7 +3,7 @@ using System.Linq;
 using Unity.Netcode;
 using UnityEngine;
 
-namespace com.github.elementbound.NetWind
+namespace FunkySheep.NetWind
 {
     public class NetworkRewindManager : NetworkBehaviour
     {

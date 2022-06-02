@@ -1,4 +1,4 @@
-﻿namespace com.github.elementbound.NetWind
+﻿namespace FunkySheep.NetWind
 {
     public interface INetworkObject
     {

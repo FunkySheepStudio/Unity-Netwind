@@ -1,8 +1,9 @@
 ﻿using Unity.Netcode;
 using UnityEngine;
 
-namespace com.github.elementbound.NetWind
+namespace FunkySheep.NetWind
 {
+    [AddComponentMenu("FunkySheep/NetWind/Rewindable Network Object")]
     public class RewindableNetworkObject : NetworkBehaviour, IRewindableObject
     {
         public ulong NetId => NetworkObjectId;

@@ -1,6 +1,6 @@
 ﻿using Unity.Netcode;
 
-namespace com.github.elementbound.NetWind
+namespace FunkySheep.NetWind
 {
     public abstract class EmptyStateBehaviour : NetworkBehaviour, IRewindableState
     {

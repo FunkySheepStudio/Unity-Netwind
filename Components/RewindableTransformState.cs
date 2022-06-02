@@ -2,16 +2,26 @@
 using Unity.Netcode;
 using System;
 
-namespace com.github.elementbound.NetWind
+namespace FunkySheep.NetWind
 {
+    [AddComponentMenu("FunkySheep/NetWind/Rewindable Transform State")]
     public class RewindableTransformState : RewindableStateBehaviour<RewindableTransformState.State>
     {
         [Serializable]
-        public struct State
+        public struct State : INetworkSerializable
         {
             public Vector3 localPosition;
             public Vector3 localScale;
             public Quaternion localRotation;
+
+            // INetworkSerializable
+            public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
+            {
+                serializer.SerializeValue(ref localPosition);
+                serializer.SerializeValue(ref localScale);
+                serializer.SerializeValue(ref localRotation);
+            }
+            // ~INetworkSerializable
         }
 
         [Header("Configuration")]

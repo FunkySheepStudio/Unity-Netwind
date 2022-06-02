@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace com.github.elementbound.NetWind
+namespace FunkySheep.NetWind
 {
     public interface IRewindableInput : INetworkObject
     {
