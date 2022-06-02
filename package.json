@@ -1,0 +1,11 @@
+{
+	"name": "net.funkysheep.unity.netwind",
+	"displayName": "FunkySheep Unity Netwind Library",
+	"version": "0.1.0",
+	"unity": "2020.3",
+	"description": "Client-side prediction and server reconciliation framework for Netcode for GameObjects",
+	"keywords": ["prediction", "networking", "unity", "netcode"],
+	"category": "networking",
+	"changelogUrl": "https://github.com/FunkySheepStudio/Unity-Netwind/blob/main/CHANGELOG.md",
+	"dependencies": {}
+}
