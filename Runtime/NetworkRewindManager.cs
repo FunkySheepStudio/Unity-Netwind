@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace FunkySheep.NetWind
 {
+    [AddComponentMenu("FunkySheep/NetWind/Network Manager")]
     public class NetworkRewindManager : NetworkBehaviour
     {
         private static NetworkRewindManager instance;
