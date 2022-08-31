@@ -34,10 +34,10 @@ namespace FunkySheep.NetWind
         {
             try
             {
-                ApplyInput(inputBuffer.Get(tick));
+              ApplyInput(inputBuffer.Get(tick));
             } catch (IndexOutOfRangeException)
             {
-                Debug.LogWarning($"[Input] Couldn't restore input for tick {tick}, ignoring");
+              Debug.LogWarning($"[Input] Couldn't restore input for tick {tick}, ignoring");
             }
         }
 

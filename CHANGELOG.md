@@ -1,3 +1,7 @@
+## Version 0.1.3 (June 01, 2022)
+- **Features**
+  - Remove logs
+
 ## Version 0.1.2 (June 01, 2022)
 - **Features**
   - Add component menu

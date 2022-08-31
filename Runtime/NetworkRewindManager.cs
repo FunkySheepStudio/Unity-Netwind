@@ -97,7 +97,8 @@ namespace FunkySheep.NetWind
                 foreach (var input in GetInputs())
                     input.AcknowledgeInputs();
 
-                Debug.Log($"[Host] Resimulating from earliest input {earliestInput} -> {currentTick}");
+                if (NetworkManager.Singleton.LogLevel == LogLevel.Developer)
+                    Debug.Log($"[Host] Resimulating from earliest input {earliestInput} -> {currentTick}");
                 RewindEvents.BeforeResimulate?.Invoke(earliestInput, currentTick);
 
                 for (int tick = earliestInput; tick <= currentTick; ++tick)
@@ -171,8 +172,8 @@ namespace FunkySheep.NetWind
                             .Where(state => state.IsOwn)
                             .Select(state => state.LatestReceivedState)
                             .Min();
-
-                    Debug.Log($"[Client] Resimulating {resimulateFrom} -> {currentTick}");
+                    if (NetworkManager.Singleton.LogLevel == LogLevel.Developer)
+                        Debug.Log($"[Client] Resimulating {resimulateFrom} -> {currentTick}");
                     RewindEvents.BeforeResimulate?.Invoke(resimulateFrom, currentTick);
 
                     for (int tick = resimulateFrom; tick <= currentTick; ++tick)
@@ -192,7 +193,8 @@ namespace FunkySheep.NetWind
                             if (state.IsOwn && tick >= state.LatestReceivedState)
                                 state.Simulate(tick, deltaTime);
                             else if (state.IsOwn)
-                                Debug.Log($"[Client] Skipping simulation of state for tick {tick}, latest known is {state.LatestReceivedState}");
+                                if (NetworkManager.Singleton.LogLevel == LogLevel.Developer)
+                                  Debug.Log($"[Client] Skipping simulation of state for tick {tick}, latest known is {state.LatestReceivedState}");
 
                         RewindEvents.OnTickSimulate?.Invoke(tick);
 
